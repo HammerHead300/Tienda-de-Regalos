@@ -66,5 +66,36 @@ fun Ropa() {
             )
             Divider()
         }
+        item {
+            //Definimos el nombre del producto
+            Text(text = "adidas Entrada 22 Sweat Hoodie Sudadera con Capucha Hombre", fontSize = 20.sp)
+            //Asignamos la imagen de producto
+            Image(painterResource(id = R.drawable.adidas), contentDescription = null,
+                modifier = Modifier
+                    .size(width = 50.dp, height = 100.dp)
+                    .padding(top = 10.dp))
+            //Asignamos el texto descriptivo del producto
+            Text(text = "Ajuste regular.\n" +
+                    "Detalles distintivos de la marca.\n" +
+                    "Ortega libertad de movimientos.\n" +
+                    "Tiene detalles distintivos de la marca.",
+                modifier = Modifier.padding(10.dp))
+            Divider()
+        }
+        item {
+            //Definimos el nombre del producto
+            Text(text = "Crocs Classic Clogs", fontSize = 20.sp)
+            //Asignamos la imagen de producto
+            Image(painterResource(id = R.drawable.crocs), contentDescription = null,
+                modifier = Modifier
+                    .size(width = 50.dp, height = 100.dp)
+                    .padding(top = 10.dp))
+            //Asignamos el texto descriptivo del producto
+            Text(text = "Material exterior: Sintético.\n" +
+                    "Material de la suela: EVA.\n" +
+                    "Tipo de tacón: Plano.",
+                modifier = Modifier.padding(10.dp))
+            Divider()
+        }
     }
 }

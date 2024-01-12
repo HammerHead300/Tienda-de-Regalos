@@ -51,6 +51,7 @@ import androidx.navigation.compose.rememberNavController
 import kotlinx.coroutines.launch
 import java.util.logging.LogManager
 
+// definicion de la clase
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,18 +61,23 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-
+//Funcion principal de la clase MainActivity
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview
 @Composable
 fun mostrar() {
+    //Estado en el que se encuentra el navegador (Abierto o cerrado)
     val estado = rememberDrawerState(initialValue = DrawerValue.Closed)
+    //Corutina de la accion que va a realizar la funcion
     val accion = rememberCoroutineScope()
+    //Define la zona actual del navegador
     var actual by remember() {
         mutableStateOf(0)
     }
+    //Controlador del navegador
     val controlador = rememberNavController()
-
+    //Host de navegacion en la que definimos los diferentes destinos de la navegacion que
+    //corresponden con las diferentes clases
     NavHost(navController = controlador, startDestination = "hogar"){
         composable("hogar"){
             Hogar()
@@ -92,7 +98,7 @@ fun mostrar() {
             Decoracion()
         }
     }
-
+    //Barra lateral de navegacion desplegable
     ModalNavigationDrawer(
         drawerState = estado,
         drawerContent = { //Contenido
@@ -107,6 +113,7 @@ fun mostrar() {
                         }
                     }
                 )
+                //Creamos un divisor y despues del mismo creamos cada "item" del navegador
                 Divider()
                 NavigationDrawerItem(
                     label = { Text(text = "Hogar") },
@@ -164,7 +171,9 @@ fun mostrar() {
                 )
             }
         }) {
+        //Lo que se muestra en pantalla
         Scaffold(
+            //Barra superior
             topBar = {
                 TopAppBar(
                     title = {
@@ -180,6 +189,7 @@ fun mostrar() {
                 )
             }
         ){innerPadding ->
+            //Como se va a mostrar la barra de navegación lateral
             Column(
                 modifier = Modifier
                     .padding(innerPadding)
