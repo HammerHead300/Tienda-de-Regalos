@@ -20,25 +20,30 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun Ropa() {
+    //La linea contiene el titulo del departamiento de la tienda
     Row(modifier = Modifier
         .background(Color.Gray)
         .fillMaxWidth(),
         horizontalArrangement = Arrangement.Center){
         Text(text = "Ropa", fontSize = 30.sp)
     }
+    //Dentro de la LazyColumn introducimos todos los objetos que esten disponibles en el departamento
     LazyColumn(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.padding(20.dp)
     ) {
         item {
+            //Definimos el nombre del producto
             Text(text = "Jack & Jones Men Slim Fit Jeans Glenn Skinny Tapered Legs JJI Glenn " +
-                    "Original Am", fontSize = 20.sp)
+                    "Original Am", fontSize = 20.sp, modifier = Modifier.padding(top = 10.dp))
+            //Asignamos la imagen de producto
             Image(
                 painterResource(id = R.drawable.vaqueros), contentDescription = null,
                 modifier = Modifier
                     .size(width = 50.dp, height = 100.dp)
                     .padding(top = 10.dp)
             )
+            //Asignamos el texto descriptivo del producto
             Text(
                 text = "Pantalones vaqueros de corte ajustado con perneras cónicas y cintura baja.\n" +
                         "Con detalles de estilo clásico de cinco bolsillos.\n" +
@@ -49,14 +54,17 @@ fun Ropa() {
             Divider()
         }
         item {
+            //Definimos el nombre del producto
             Text(text = "Joma Camiseta Brama Classic Manga Larga Camiseta Termica Textil",
-                fontSize = 20.sp)
+                fontSize = 20.sp, modifier = Modifier.padding(top = 10.dp))
+            //Asignamos la imagen de producto
             Image(
                 painterResource(id = R.drawable.camiseta), contentDescription = null,
                 modifier = Modifier
                     .size(width = 50.dp, height = 100.dp)
                     .padding(top = 10.dp)
             )
+            //Asignamos el texto descriptivo del producto
             Text(
                 text = "Camiseta terminal de manga larga.\n" +
                         "Térmica de cuello alto.\n" +
@@ -68,7 +76,8 @@ fun Ropa() {
         }
         item {
             //Definimos el nombre del producto
-            Text(text = "adidas Entrada 22 Sweat Hoodie Sudadera con Capucha Hombre", fontSize = 20.sp)
+            Text(text = "adidas Entrada 22 Sweat Hoodie Sudadera con Capucha Hombre",
+                fontSize = 20.sp, modifier = Modifier.padding(top = 10.dp))
             //Asignamos la imagen de producto
             Image(painterResource(id = R.drawable.adidas), contentDescription = null,
                 modifier = Modifier
@@ -84,7 +93,8 @@ fun Ropa() {
         }
         item {
             //Definimos el nombre del producto
-            Text(text = "Crocs Classic Clogs", fontSize = 20.sp)
+            Text(text = "Crocs Classic Clogs", fontSize = 20.sp,
+                modifier = Modifier.padding(top = 10.dp))
             //Asignamos la imagen de producto
             Image(painterResource(id = R.drawable.crocs), contentDescription = null,
                 modifier = Modifier

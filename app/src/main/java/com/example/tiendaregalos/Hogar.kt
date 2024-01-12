@@ -33,7 +33,7 @@ fun Hogar(){
         modifier = Modifier.padding(10.dp)){
         item{
             //Definimos el nombre del producto
-            Text(text = "Mueble simple", fontSize = 20.sp)
+            Text(text = "Mueble simple", fontSize = 20.sp, modifier = Modifier.padding(top = 10.dp))
             //Asignamos la imagen de producto
             Image(painterResource(id = R.drawable.muebleblanco), contentDescription = null,
                 modifier = Modifier
@@ -51,7 +51,8 @@ fun Hogar(){
         }
         item{
             //Definimos el nombre del producto
-            Text(text = "Mueble con soporte para TV", fontSize = 20.sp)
+            Text(text = "Mueble con soporte para TV", fontSize = 20.sp,
+                modifier = Modifier.padding(top = 10.dp))
             //Asignamos la imagen de producto
             Image(painterResource(id = R.drawable.muebletv), contentDescription = null,
                 modifier = Modifier
@@ -70,7 +71,7 @@ fun Hogar(){
         item{
             //Definimos el nombre del producto
             Text(text = "Dormio Zafiro - Colchón viscoelástico, Blanco, 135 x 190 x 21 cm",
-                fontSize = 20.sp)
+                fontSize = 20.sp, modifier = Modifier.padding(top = 10.dp))
             //Asignamos la imagen de producto
             Image(painterResource(id = R.drawable.colchon), contentDescription = null,
                 modifier = Modifier
@@ -102,7 +103,8 @@ fun Hogar(){
             //Definimos el nombre del producto
             Text(text = "rattantree Silla de Oficina, Silla de Escritorio Ergonómica con" +
                     " Reposacabezas Ajustable y Soporte Lumbar, Respaldo de Malla Transpirable," +
-                    " Reposabrazos Abatibles de 90°, Silla Giratoria de 360°", fontSize = 20.sp)
+                    " Reposabrazos Abatibles de 90°, Silla Giratoria de 360°", fontSize = 20.sp,
+                modifier = Modifier.padding(top = 10.dp))
             //Asignamos la imagen de producto
             Image(painterResource(id = R.drawable.silla), contentDescription = null,
                 modifier = Modifier

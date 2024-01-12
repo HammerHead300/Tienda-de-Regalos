@@ -32,7 +32,8 @@ fun Electronica(){
         modifier = Modifier.padding(10.dp)){
         item {
             //Definimos el nombre del producto
-            Text(text = "Beyerdinamic DT 770 Pro", fontSize = 20.sp)
+            Text(text = "Beyerdinamic DT 770 Pro", fontSize = 20.sp,
+                modifier = Modifier.padding(top = 10.dp))
             //Asignamos la imagen de producto
             Image(
                 painterResource(id = R.drawable.beyerdinamic), contentDescription = null,
@@ -55,7 +56,8 @@ fun Electronica(){
         }
         item {
             //Definimos el nombre del producto
-            Text(text = "SanDisk 1TB Extreme SSD portátil", fontSize = 20.sp)
+            Text(text = "SanDisk 1TB Extreme SSD portátil", fontSize = 20.sp,
+                modifier = Modifier.padding(top = 10.dp))
             //Asignamos la imagen de producto
             Image(painterResource(id = R.drawable.sandisk), contentDescription = null,
                 modifier = Modifier
@@ -85,7 +87,8 @@ fun Electronica(){
         }
         item {
             //Definimos el nombre del producto
-            Text(text = "DracoTek Terrain 4 - GPS para motos", fontSize = 20.sp)
+            Text(text = "DracoTek Terrain 4 - GPS para motos", fontSize = 20.sp,
+                modifier = Modifier.padding(top = 10.dp))
             //Asignamos la imagen de producto
             Image(painterResource(id = R.drawable.gps), contentDescription = null,
                 modifier = Modifier
@@ -102,7 +105,7 @@ fun Electronica(){
             //Definimos el nombre del producto
             Text(text = "Focusrite Scarlett 2i2 4.ª gen. interfaz de audio USB para grabar, " +
                     "componer, retransmitir y emitir pódcast. Grabación con sonido de estudio y " +
-                    "alta fidelidad", fontSize = 20.sp)
+                    "alta fidelidad", fontSize = 20.sp, modifier = Modifier.padding(top = 10.dp))
             //Asignamos la imagen de producto
             Image(painterResource(id = R.drawable.interfaz), contentDescription = null,
                 modifier = Modifier
